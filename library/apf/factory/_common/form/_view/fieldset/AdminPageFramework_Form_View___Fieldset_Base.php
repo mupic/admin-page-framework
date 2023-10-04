@@ -66,7 +66,8 @@ abstract class AdminPageFramework_Form_View___Fieldset_Base extends AdminPageFra
     private function ___getContainerAttributes($aArguments)
     {
         $_aContainerAttributes = array( 'class' => $this->getClassAttribute('admin-page-framework-repeatable-field-buttons', ! empty($aArguments[ 'disabled' ]) ? 'disabled' : ''), );
-        unset($aArguments[ 'disabled' ][ 'message' ]);
+		if(isset($aArguments[ 'disabled' ][ 'message' ]))
+            unset($aArguments[ 'disabled' ][ 'message' ]);
         if (empty($aArguments[ 'disabled' ])) {
             unset($aArguments[ 'disabled' ]);
         }

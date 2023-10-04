@@ -34,7 +34,8 @@ class AdminPageFramework_Form_View___SectionRepeatableButtons extends AdminPageF
     private static function ___getContainerAttributes(array $aArguments, $oMsg)
     {
         $_aAttributes = array( 'class' => self::getClassAttribute('admin-page-framework-repeatable-section-buttons', empty($aArguments[ 'disabled' ]) ? '' : 'disabled'), );
-        unset($aArguments[ 'disabled' ][ 'message' ]);
+        if(isset($aArguments[ 'disabled' ][ 'message' ]))
+			unset($aArguments[ 'disabled' ][ 'message' ]);
         if (empty($aArguments[ 'disabled' ])) {
             unset($aArguments[ 'disabled' ]);
         }

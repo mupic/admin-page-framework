@@ -32,6 +32,7 @@ class AdminPageFramework_Form_View___FieldTitle extends AdminPageFramework_Form_
         if (! $aField[ 'show_title_column' ]) {
             return '';
         }
+		$aField[ 'description' ] = $aField[ 'description' ] ?? '';
         $_oInputTagIDGenerator = new AdminPageFramework_Form_View___Generate_FieldInputID($aField, 0);
         $_aLabelAttributes = array( 'class' => $this->getClassAttribute('admin-page-framework-field-title', $this->aClassSelectors), 'for' => $_oInputTagIDGenerator->get(), );
         $_sOutput .= $aField[ 'title' ] ? "<label " . $this->getAttributes($_aLabelAttributes) . "'>" . "<a id='{$aField[ 'field_id' ]}'></a>" . "<span title='" . esc_attr(strip_tags(is_array($aField[ 'description' ]) ? implode('&#10;', $aField[ 'description' ]) : $aField[ 'description' ])) . "'>" . $aField[ 'title' ] . $this->_getTitleColon($aField) . "</span>" . $this->___getToolTip($aField[ 'tip' ], $aField[ 'field_id' ]) . "</label>" : '';

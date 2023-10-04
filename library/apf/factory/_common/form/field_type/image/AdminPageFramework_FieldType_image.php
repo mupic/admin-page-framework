@@ -69,7 +69,7 @@ class AdminPageFramework_FieldType_image extends AdminPageFramework_FieldType {
         if (! $aField[ 'show_preview' ]) {
             return '';
         }
-        $sImageURL = esc_url($this->getResolvedSRC($sImageURL, true));
+        $sImageURL = esc_url($this->getResolvedSRC($sImageURL, true)??'');
         return "<div " . $this->getAttributes(array( 'id' => "image_preview_container_{$aField[ 'input_id' ]}", 'class' => 'image_preview ' . $this->getElement($aPreviewAttributes, 'class', ''), 'style' => $this->getAOrB($sImageURL, '', "display: none; ") . $this->getElement($aPreviewAttributes, 'style', ''), ) + $aPreviewAttributes) . ">" . "<img src='{$sImageURL}' " . "id='image_preview_{$aField[ 'input_id' ]}' " . "/>" . "</div>";
     }
     protected function _getUploaderButtonScript($sInputID, $abRepeatable, $bExternalSource, array $aButtonAttributes)
