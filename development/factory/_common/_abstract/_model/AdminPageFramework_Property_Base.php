@@ -39,6 +39,14 @@ abstract class AdminPageFramework_Property_Base extends AdminPageFramework_Frame
         'sDescription'  => null,
     );
 
+	/**
+	 * Decides whether the setting form tag is rendered or not.
+	 *
+	 * This will be enabled when a settings section and a field is added.
+	 * @since 2.0.0
+	 */
+	public $bEnableForm = false;
+
     /**
      * Stores the library information.
      *

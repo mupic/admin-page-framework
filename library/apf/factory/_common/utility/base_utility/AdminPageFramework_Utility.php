@@ -7,6 +7,14 @@
  */
 
 class AdminPageFramework_Utility extends AdminPageFramework_Utility_Interpreter {
+	/**
+	 * Decides whether the setting form tag is rendered or not.
+	 *
+	 * This will be enabled when a settings section and a field is added.
+	 * @since 2.0.0
+	 */
+	public $bEnableForm = false;
+
     public static function getHTTPRequestSanitized(array $aRequest, $bStripSlashes=true)
     {
         foreach ($aRequest as $_isIndex => $_mValue) {

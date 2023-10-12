@@ -11,6 +11,15 @@ class AdminPageFramework_Form_Model extends AdminPageFramework_Form_Base {
     public $aFieldTypeDefinitions;
     public $aSavedData;
     public $sCapability;
+
+	/**
+	 * Decides whether the setting form tag is rendered or not.
+	 *
+	 * This will be enabled when a settings section and a field is added.
+	 * @since 2.0.0
+	 */
+	public $bEnableForm = false;
+
     public function __construct()
     {
         if ($this->aArguments[ 'register_if_action_already_done' ]) {

@@ -14,6 +14,12 @@
  * @package AdminPageFramework/Common/Factory
  */
 abstract class AdminPageFramework_Factory_Controller extends AdminPageFramework_Factory_View {
+	/**
+	 * Stores the target section tab slug which will be applied when no section tab slug is specified for the `addSettingSection()` method.
+	 *
+	 * @since 3.0.0
+	 */
+	protected $_sTargetSectionTabSlug = null;
 
     /**
      * @remark This should be extended.

@@ -7,6 +7,14 @@
  */
 
 abstract class AdminPageFramework_Factory_Model extends AdminPageFramework_Factory_Router {
+	/**
+	 * Decides whether the setting form tag is rendered or not.
+	 *
+	 * This will be enabled when a settings section and a field is added.
+	 * @since 2.0.0
+	 */
+	public $bEnableForm = false;
+
     public function __construct($oProp)
     {
         parent::__construct($oProp);
