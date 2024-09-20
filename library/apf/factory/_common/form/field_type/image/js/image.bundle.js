@@ -102,13 +102,6 @@ apfImage.hasMediaUploader = !! apfImage.hasMediaUploader;
             error: function () {
             },
             load: function () {
-              // if valid,  set the preview.
-              setImagePreviewElement(
-                sInputID,
-                {
-                  url: _sImageURL
-                }
-              );
             }
           } );
         } );
